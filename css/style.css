@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 12vh;
+    background-color: #009688;
+    z-index: 3;
+}
+
+body{
+    background-color: #D9DBD5;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    position: absolute;
+    left: 11.8rem;
+    top: 1rem;
+    z-index: 1;
+    width: 80%;
+    height:96.5vh;
+    background-color: #EAEAEA;
+}
+
+.contact-side{
+    background-color: black;
+    width: 30%;
+}
+
+.chat-side{
+    background-color: blue;
+    width: 70%;
+}
