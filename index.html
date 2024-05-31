@@ -13,12 +13,29 @@
 
         </header>
         <main>
-            <div class="container">
+            <div class="container" id="App">
                 <section class="contact-side">
-                    
+                    <div class="contact-side-nav"></div>
+                    <div class="contact-side-notif"></div>
+                    <div class="contact-side-search"></div>
+                    <div class="contact-side-chatList">
+                        <ul class="contact-side-chats">
+                            <li v-for="(contact,i) in contactList">
+                                <div class="contact">
+                                    <div class="contact-img">
+                                        <img :src="contactList[i].avatar" alt="contactList[i].name">
+                                    </div>
+                                    <div class="contact-name">
+                                        <p>{{contactList[i].name}}</p>
+                                        <p></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </section>
                 <section class="chat-side">
-
+                    <div class="chat-side-nav"></div>
                 </section>
             </div>
         </main>
