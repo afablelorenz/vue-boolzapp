@@ -6,6 +6,11 @@
         <title>Boolzapp</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+        <script src="https://kit.fontawesome.com/c7e27443fd.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
@@ -15,9 +20,37 @@
         <main>
             <div class="container" id="App">
                 <section class="contact-side">
-                    <div class="contact-side-nav"></div>
-                    <div class="contact-side-notif"></div>
-                    <div class="contact-side-search"></div>
+                    <div class="contact-side-nav">
+                        <div class="contact-side-nav-avatar">
+                            <img src="./img/avatar_io.jpg">
+                            <p>Sofia</p>
+                        </div>
+                        <div class="contact-side-nav-icons">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="contact-side-notif">
+                        <div class="contact-side-notif-icon">
+                            <i class="fa-solid fa-bell-slash fa-2x"  style="background:#F2FBFF; border-radius:50%; color:#8EDAFC"></i>
+                        </div>
+                        <div class="contact-side-notif-message">
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <p class="contact-side-notif-message-mod">Attiva notifiche desktop</p>
+                        </div>
+                    </div>
+                    <div class="contact-side-search">
+                        <div class="container-contact-search">
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div>
+                                <p>Cerca o inizia una nuova chat</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="contact-side-chatList">
                         <ul class="contact-side-chats">
                             <li v-for="(contact,i) in contactList">
@@ -27,15 +60,39 @@
                                     </div>
                                     <div class="contact-name">
                                         <p>{{contactList[i].name}}</p>
-                                        <p></p>
+                                        <p>Ultimo messaggio</p>
                                     </div>
                                 </div>
+                                <hr>
                             </li>
                         </ul>
                     </div>
                 </section>
                 <section class="chat-side">
-                    <div class="chat-side-nav"></div>
+                    <div class="chat-side-nav">
+                        <div>
+                            <span>avatar</span>
+                        </div>
+                        <div>
+                            <div>
+                            <p>nome</p>
+                            <p>ultimo accesso</p>
+                            </div>
+                            <div>
+                                <span>icona</span>
+                                <span>clip</span>
+                                <span>Dotted icon</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-side-messageArea">
+
+                    </div>
+                    <footer class="chat-side-footer">
+                        <span>icona</span>
+                        <input type="text">
+                        <span>icona</span>
+                    </footer>
                 </section>
             </div>
         </main>
