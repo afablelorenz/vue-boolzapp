@@ -16,3 +16,8 @@ Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati
 
 Milestone 5 - opzionale
 Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
+
+milestone 1:
+1. iniziare con gli elementi di css per replicara la grafica
+2. creare la lista di contatti
+3. tramite v-for, visualizzare nome e immagine di ogni contatto
