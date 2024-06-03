@@ -182,6 +182,10 @@ ul li{
     padding: 1rem;
 }
 
+.contact:hover{
+    background-color: #E9EBEB;
+}
+
 .contact-img img{
     height: 2.7rem;
     border-radius: 50%;

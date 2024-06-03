@@ -21,3 +21,7 @@ milestone 1:
 1. iniziare con gli elementi di css per replicara la grafica
 2. creare la lista di contatti
 3. tramite v-for, visualizzare nome e immagine di ogni contatto
+
+milestone 2:
+1. creare un indice per ciascun contatto
+2. tramite l'indice assegnata, si puo usare il v-for per visualizzare i messaggi relativi al contatto attivo
