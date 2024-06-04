@@ -53,7 +53,7 @@
                     </div>
                     <div class="contact-side-chatList">
                         <ul class="contact-side-chats">
-                            <li v-for="(contact,i) in contactList" :key="contact.id" @click="setActiveContact(contact)">
+                            <li v-for="(contact,i) in contactList" :key="contact.name" @click="setActiveContact(i)">
                                 <div class="contact">
                                     <div class="contact-img">
                                         <img :src="contactList[i].avatar" alt="contactList[i].name">
@@ -68,12 +68,12 @@
                         </ul>
                     </div>
                 </section>
-                <section class="chat-side" >
-                    <div class="chat-side-nav">
-                        <div class="chat-side-nav-avatar" v-if="activeContact">
-                            <img :src="activeContact.avatar">
+                <section class="chat-side" v-if="activeContact !== null">
+                    <div class="chat-side-nav" >
+                        <div class="chat-side-nav-avatar">
+                            <img :src="contactList[activeContact].avatar">
                             <div class="chat-side-nav-avatar-text">
-                                <p>{{activeContact.name}}</p>
+                                <p>{{contactList[activeContact].name}}</p>
                                 <p>ultimo accesso</p>
                             </div>
                         </div>
@@ -92,8 +92,6 @@
                         :class="{'sent': messageContact.status === 'sent', 'received': messageContact.status === 'received'}">
                         {{ messageContact.message }}
                     </article>
-                        
-                        
                     </div>
                     <footer class="chat-side-footer-container">
                         <div class="chat-side-footer">
@@ -105,7 +103,6 @@
                                 <i class="fa-solid fa-microphone fa-2x"></i>
                             </div>
                         </div>
-                        
                     </footer>
                 </section>
             </div>

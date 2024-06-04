@@ -151,7 +151,6 @@ createApp({
                     ],
                 },
                 {
-                    id: 8,
                     name: 'Davide',
                     avatar: './img/avatar_8.jpg',
                     visible: true,
@@ -171,18 +170,19 @@ createApp({
                             message: 'OK!!',
                             status: 'received'
                         }
-                    ],
+                    ]
                 }            
             ],
-            activeContact: 0,
+            activeContact: null
         }
     },
     methods:{
-        setActiveContact: function(contact){
-            this.activeContact = contact;
+        setActiveContact: function(index){
+            this.activeContact = index;
+            console.log(this.activeContact)
         },
         getActiveContact: function(){
-            return this.activeContact;
+            console.log(this.activeContact)
         }
     }
 }).mount('#App');
