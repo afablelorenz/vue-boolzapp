@@ -194,7 +194,18 @@ createApp({
             };
             this.contactList[this.activeContact].messages.push(newMessageObject);
             this.newMessage='';
+            this.receiveMessage();
         },
+        receiveMessage: function(){
+            setTimeout(() => {
+                const newMessageObject = {
+                    date: '',
+                    message: 'ok',
+                    status:'received'
+                };
+                this.contactList[this.activeContact].messages.push(newMessageObject);
+            },1000);
+        }
     }
 }).mount('#App');
 
