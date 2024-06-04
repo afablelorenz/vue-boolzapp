@@ -53,26 +53,27 @@
                     </div>
                     <div class="contact-side-chatList">
                         <ul class="contact-side-chats">
-                            <li v-for="(contact,i) in contactList">
+                            <li v-for="(contact,i) in contactList" :key="contact.id" @click="setActiveContact(contact)">
                                 <div class="contact">
                                     <div class="contact-img">
                                         <img :src="contactList[i].avatar" alt="contactList[i].name">
                                     </div>
                                     <div class="contact-name">
-                                        <p>{{contactList[i].name}}</p>
-                                        <p>Ultimo messaggio</p>
+                                        <p>{{contactList[i].name}} </p>
+                                        <p>Ultimo messaggio inviato</p>
+                                        
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </section>
-                <section class="chat-side">
+                <section class="chat-side" v-if="activeContact">
                     <div class="chat-side-nav">
-                        <div class="chat-side-nav-avatar">
-                            <img src="./img/avatar_1.jpg">
+                        <div class="chat-side-nav-avatar" >
+                            <img :src="activeContact.avatar">
                             <div class="chat-side-nav-avatar-text">
-                                <p>Michele</p>
+                                <p>{{activeContact.name}}</p>
                                 <p>ultimo accesso</p>
                             </div>
                             
@@ -86,15 +87,8 @@
                         </div>
                     </div>
                     <div class="chat-side-messageArea">
-                        <article class="message sent">
-                            Hai portato a spasso il cane?
                         </article>
-                        <article class="message sent">
-                            Ricordati di stendere i panni
-                        </article>
-                        <article class="message received">
-                            Tutto Fatto!
-                        </article>
+                        
                     </div>
                     <footer class="chat-side-footer-container">
                         <div class="chat-side-footer">

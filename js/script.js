@@ -5,6 +5,7 @@ createApp({
         return{
             contactList: [
                 {
+                    id: 1,
                     name: 'Michele',
                     avatar: './img/avatar_1.jpg',
                     visible: true,
@@ -27,6 +28,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 2,
                     name: 'Fabio',
                     avatar: './img/avatar_2.jpg',
                     visible: true,
@@ -49,6 +51,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 3,
                     name: 'Samuele',
                     avatar: './img/avatar_3.jpg',
                     visible: true,
@@ -71,6 +74,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 4,
                     name: 'Alessandro B.',
                     avatar: './img/avatar_4.jpg',
                     visible: true,
@@ -88,6 +92,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 5,
                     name: 'Alessandro L.',
                     avatar: './img/avatar_5.jpg',
                     visible: true,
@@ -105,6 +110,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 6,
                     name: 'Claudia',
                     avatar: './img/avatar_6.jpg',
                     visible: true,
@@ -127,6 +133,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 7,
                     name: 'Federico',
                     avatar: './img/avatar_7.jpg',
                     visible: true,
@@ -144,6 +151,7 @@ createApp({
                     ],
                 },
                 {
+                    id: 8,
                     name: 'Davide',
                     avatar: './img/avatar_8.jpg',
                     visible: true,
@@ -165,10 +173,15 @@ createApp({
                         }
                     ],
                 }            
-            ]
+            ],
+            activeContact: 0,
         }
     },
     methods:{
+        setActiveContact(contact){
+            this.activeContact = contact;
+            console.log('activeContact: '+ this.activeContact);
+        }
     }
 }).mount('#App');
 
