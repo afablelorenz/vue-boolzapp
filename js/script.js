@@ -173,7 +173,8 @@ createApp({
                     ]
                 }            
             ],
-            activeContact: null
+            activeContact: null,
+            newMessage:'',
         }
     },
     methods:{
@@ -183,7 +184,17 @@ createApp({
         },
         getActiveContact: function(){
             console.log(this.activeContact)
-        }
+        },
+        sendMessage: function(){
+            if (this.newMessage.trim() === '') return;
+            const newMessageObject = {
+                date: '',
+                message: this.newMessage,
+                status:'sent'
+            };
+            this.contactList[this.activeContact].messages.push(newMessageObject);
+            this.newMessage='';
+        },
     }
 }).mount('#App');
 
