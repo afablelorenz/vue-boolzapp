@@ -68,15 +68,14 @@
                         </ul>
                     </div>
                 </section>
-                <section class="chat-side" v-if="activeContact">
+                <section class="chat-side" >
                     <div class="chat-side-nav">
-                        <div class="chat-side-nav-avatar" >
+                        <div class="chat-side-nav-avatar" v-if="activeContact">
                             <img :src="activeContact.avatar">
                             <div class="chat-side-nav-avatar-text">
                                 <p>{{activeContact.name}}</p>
                                 <p>ultimo accesso</p>
                             </div>
-                            
                         </div>
                         <div>
                             <div class="chat-side-nav-icons">
@@ -87,7 +86,13 @@
                         </div>
                     </div>
                     <div class="chat-side-messageArea">
-                        </article>
+                        <article class="message"
+                        v-for="messageContact in contactList[activeContact].messages" 
+                        :key="messageContact.date" 
+                        :class="{'sent': messageContact.status === 'sent', 'received': messageContact.status === 'received'}">
+                        {{ messageContact.message }}
+                    </article>
+                        
                         
                     </div>
                     <footer class="chat-side-footer-container">
