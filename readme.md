@@ -31,3 +31,6 @@ milestone 3:
 2. prendere il dato dal text input e metterlo dentro in un oggetto message
 3. pushare l'oggetto nuovo al contatto attivo
 4. creare un metodo che crea un altro oggetto message che contiene il messaggio 'ok' e viene inserito dentro un timeout di 1000
+
+milestone 4:
+1. 

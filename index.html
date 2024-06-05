@@ -46,14 +46,14 @@
                             <div class="contact-side-search-glassDiv">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
-                            <div>
-                                <p>Cerca o inizia una nuova chat</p>
+                            <div class="contact-side-search-input">
+                                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchText" @input="filterContacts">
                             </div>
                         </div>
                     </div>
                     <div class="contact-side-chatList">
                         <ul class="contact-side-chats">
-                            <li v-for="(contact,i) in contactList" :key="contact.name" @click="setActiveContact(i)">
+                            <li v-for="(contact,i) in contactList" :key="contact.name" @click="setActiveContact(i)" v-show="contact.visible">
                                 <div class="contact">
                                     <div class="contact-img">
                                         <img :src="contactList[i].avatar" alt="contactList[i].name">

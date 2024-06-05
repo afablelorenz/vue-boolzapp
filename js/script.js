@@ -175,7 +175,11 @@ createApp({
             ],
             activeContact: null,
             newMessage:'',
+            searchText:'',
         }
+    },
+    created(){
+        this.filteredContactList = this.contactList;
     },
     methods:{
         setActiveContact: function(index){
@@ -205,6 +209,12 @@ createApp({
                 };
                 this.contactList[this.activeContact].messages.push(newMessageObject);
             },1000);
+        },
+        filterContacts: function(){
+            const search = this.searchText.toLowerCase();
+            this.contactList.forEach(contact => {
+                contact.visible = contact.name.toLowerCase().includes(search)
+            });
         }
     }
 }).mount('#App');

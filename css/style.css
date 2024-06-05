@@ -164,6 +164,14 @@ ul li{
     color: gray;
 }
 
+.contact-side-search-input{
+
+}
+
+.contact-side-search-input input{
+    width: 100%;
+}
+
 .container-contact-search{
     display: flex;
     background-color: white;
